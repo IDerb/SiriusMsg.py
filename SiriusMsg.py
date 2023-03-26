@@ -1,6 +1,7 @@
 import SSH
 import os
 import configparser
+import logging
 
 # отладочный режим, открывает файл 'Ssh_exemple.ini', который выкладывается на GitHub
 ImitMode = 0
@@ -8,6 +9,11 @@ ImitMode = 0
 ARMs = {}
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG, filename="SiriusMsg.log", filemode="w")
+    logger=logging.getLogger()
+    print(logger.level)
+    logger.debug("Запуск программы")
+    logger.critical("йййй")
 
     if ImitMode:
         FleName = 'Ssh_exemple.ini'
