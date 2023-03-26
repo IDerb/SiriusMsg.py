@@ -3,22 +3,29 @@ import SSH
 import os
 import configparser
 
+ImitMode = 1
+
 ARMs = {}
-print('df')
+
 if __name__ == '__main__':
+
+    if ImitMode:
+        FleName = 'Ssh_exemple.ini'
+    else:
+        FleName = 'Ssh.ini'
 
     config = configparser.ConfigParser()
 
     Ok = 1
     if os.path.exists('Ssh.ini'):
-        print('Найден файл' + 'Ssh.ini:' + 'идет чтение конфигурации\n')
+        print('Найден файл ' + FleName + ' идет чтение конфигурации\n')
     else:
-        print('Не найден файл', 'Ssh.ini')
+        print('Не найден файл ', FleName)
         Ok = 0
 
     if Ok:
         try:
-            with open('Ssh.ini') as fp:
+            with open(FleName) as fp:
                 config.read_file(fp)
 
             # чтение настроек АРМов
