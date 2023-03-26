@@ -10,7 +10,7 @@ ARMs = {}
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, filename="SiriusMsg.log", filemode="w")
-    logger=logging.getLogger()
+    logger = logging.getLogger()
     print(logger.level)
     logger.debug("Запуск программы")
     logger.critical("йййй")
