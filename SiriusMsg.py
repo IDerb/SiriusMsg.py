@@ -16,7 +16,7 @@ if __name__ == '__main__':
     logger.critical("йййй")
 
     if ImitMode:
-        FleName = 'Ssh_exemple.ini'
+        FleName = 'Ssh_example.ini'
     else:
         FleName = 'Ssh.ini'
 
