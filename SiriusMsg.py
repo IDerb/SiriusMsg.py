@@ -1,9 +1,9 @@
-
 import SSH
 import os
 import configparser
 
-ImitMode = 1
+# отладочный режим, открывает файл 'Ssh_exemple.ini', который выкладывается на GitHub
+ImitMode = 0
 
 ARMs = {}
 
